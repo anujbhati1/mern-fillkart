@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
+import { Helmet } from 'react-helmet-async';
 import Product from '../components/Product';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -41,6 +42,9 @@ export default function HomeScreen() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Fillkart</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
