@@ -84,3 +84,8 @@ main {
 .text-white {
   columns: #ffffff;
 }
+
+/* Search Screen */
+.text-bold {
+  font-weight: bold;
+}
