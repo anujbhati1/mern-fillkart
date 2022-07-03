@@ -6,6 +6,7 @@ import data from '../data.js';
 const seedRouter = express.Router();
 
 seedRouter.get('/', async (req, res) => {
+  // await Product.deleteMany({}); //we can also use this for both Product and User
   await Product.remove({});
   const createdProducts = await Product.insertMany(data.products);
   await User.remove({});
